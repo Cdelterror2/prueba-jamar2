@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.title__page, h2.title__product {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title__page {
+    margin: 3rem 9rem;
+}
+
+div#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 7rem;
+}
+
+.container__product {
+    justify-content: space-around;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 20rem;
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h2.title__product {
+    font-size: .78rem;
+}
+
+.container__product>img {
+    border-radius: 1rem;
+    border: 1px solid lightgray;
+}
+
+.container__description .box-collection-price-regular>p:nth-child(2n) {
+    margin-left: 15rem !important;
+}
+
+
+.paginator {
+    display: flex;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    background-color: #354047;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.color__variant {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 8rem;
+}
+
+button#btnBack, button#btnNext {
+    border: 0;
+    padding: 1rem 3rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+
+/* Animation load */
+
+.spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+
+    & .path {
+        stroke: hsl(210, 100%, 51%);
+        stroke-linecap: round;
+        animation: dash 1.5s ease-in-out infinite;
+    }
+
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+
+
+/* end Animation load */
